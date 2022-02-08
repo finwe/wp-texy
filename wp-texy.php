@@ -29,4 +29,15 @@ class TexyPlugin
 
 }
 
+remove_filter('the_content', 'wptexturize');
+remove_filter('the_content', 'convert_smilies');
+remove_filter('the_content', 'convert_chars');
+remove_filter('the_content', 'wpautop');
+
+remove_filter('the_excerpt', 'wptexturize');
+remove_filter('the_excerpt', 'convert_smilies');
+remove_filter('the_excerpt', 'convert_chars');
+remove_filter('the_excerpt', 'wpautop');
+
+add_filter('the_excerpt', [TexyPlugin::class, 'texy']);
 add_filter('the_content', [TexyPlugin::class, 'texy']);
