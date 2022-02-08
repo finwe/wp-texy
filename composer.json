@@ -1,0 +1,20 @@
+{
+    "name": "finwe/wp-texy",
+    "license": "proprietary",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Matěj Humpál",
+            "email": "humpal@followbubble.com"
+        }
+    ],
+    "require": {
+        "texy/texy": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {"WpTexy\\": "src"}
+    },
+    "require-dev": {
+        "tracy/tracy": "^2.4"
+    }
+}
