@@ -24,13 +24,9 @@ class TexyPlugin
 		if (!self::$texy) {
 			self::$texy = new \Texy\Texy();
 			self::$texy->headingModule->top = 3;
-			self::$texy->allowed['heading/underlined'] = true;
-			self::$texy->allowed['heading/surrounded'] = true;
 		}
 	}
 
 }
 
-
-
-add_filter('the_content', [TexyPlugin::class, 'texy']);
+add_filter('the_content', [TexyPlugin::class, 'texy'], 1);
