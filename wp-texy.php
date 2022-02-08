@@ -29,4 +29,4 @@ class TexyPlugin
 
 }
 
-add_filter('the_content', [TexyPlugin::class, 'texy'], 1);
+add_filter('the_content', [TexyPlugin::class, 'texy']);
